@@ -1,14 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Project PAG-ASA | Every Step Counts</title>
 
-    <meta name="description" content="Project PAG-ASA works toward safe and sustainable school transportation for children in remote communities in the Philippines.">
+    <meta
+        name="description"
+        content="Project PAG-ASA works toward safe and sustainable school transportation for children in remote communities in the Philippines."
+    >
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -26,7 +34,10 @@
             background: #ffffff;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: fixed;
@@ -64,25 +75,35 @@
             text-decoration: none;
             color: #374151;
             font-weight: 600;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
             color: #0038a8;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 100vh;
             padding: 150px 24px 100px;
             display: flex;
             align-items: center;
+
             background:
                 linear-gradient(
                     rgba(0, 56, 168, 0.82),
                     rgba(0, 56, 168, 0.72)
                 ),
-                linear-gradient(135deg, #0038a8, #ce1126);
+                linear-gradient(
+                    135deg,
+                    #0038a8,
+                    #ce1126
+                );
+
             color: white;
         }
 
@@ -115,19 +136,29 @@
             display: inline-block;
             margin-top: 35px;
             padding: 14px 28px;
+
             background: white;
             color: #0038a8;
+
             text-decoration: none;
             border-radius: 8px;
+
             font-weight: 700;
-            transition: 0.2s;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .hero-button:hover {
             transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
         }
 
-        /* GENERAL */
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         section {
             padding: 90px 24px;
@@ -152,7 +183,10 @@
             color: #4b5563;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             background: #f8fafc;
@@ -169,6 +203,15 @@
             padding: 30px;
             border-radius: 12px;
             border: 1px solid #e5e7eb;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
         .card h3 {
@@ -176,7 +219,19 @@
             margin-bottom: 12px;
         }
 
-        /* VISION */
+
+        /* =========================
+           CHALLENGE
+        ========================= */
+
+        .challenge {
+            background: #ffffff;
+        }
+
+
+        /* =========================
+           VISION
+        ========================= */
 
         .vision {
             background: #ffffff;
@@ -185,8 +240,11 @@
         .vision-box {
             max-width: 850px;
             margin: auto;
+
             padding: 45px;
+
             border-left: 5px solid #ce1126;
+
             background: #f8fafc;
         }
 
@@ -194,7 +252,10 @@
             font-size: 1.15rem;
         }
 
-        /* PHASE */
+
+        /* =========================
+           RESEARCH
+        ========================= */
 
         .phase {
             background: #f1f5f9;
@@ -202,25 +263,36 @@
 
         .phase-number {
             text-align: center;
+
             font-size: 4rem;
             font-weight: 800;
+
             color: #ce1126;
+
             margin-bottom: 10px;
         }
 
         .phase h3 {
             text-align: center;
+
             margin-bottom: 20px;
+
             font-size: 1.5rem;
+
+            color: #1f2933;
         }
 
         .phase p {
             max-width: 750px;
             margin: auto;
+
             text-align: center;
         }
 
-        /* MUSIC */
+
+        /* =========================
+           MUSIC
+        ========================= */
 
         .music {
             background: #0038a8;
@@ -238,6 +310,7 @@
         .music-box {
             max-width: 750px;
             margin: auto;
+
             text-align: center;
         }
 
@@ -246,7 +319,10 @@
             margin-bottom: 10px;
         }
 
-        /* CONTACT */
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             background: #f8fafc;
@@ -255,21 +331,42 @@
 
         .contact-button {
             display: inline-block;
+
             margin-top: 20px;
+
             padding: 14px 28px;
+
             background: #0038a8;
             color: white;
+
             text-decoration: none;
+
             border-radius: 8px;
+
             font-weight: 700;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
         }
 
-        /* FOOTER */
+        .contact-button:hover {
+            transform: translateY(-2px);
+            background: #002d86;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #111827;
+
             color: #d1d5db;
+
             text-align: center;
+
             padding: 35px 20px;
         }
 
@@ -277,7 +374,10 @@
             color: white;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 750px) {
 
@@ -300,15 +400,27 @@
             .vision-box {
                 padding: 30px;
             }
+
+            .hero h1 {
+                font-size: clamp(2.6rem, 12vw, 4rem);
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
+
         <div class="nav-container">
 
             <div class="logo">
@@ -316,27 +428,65 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#problem">The Challenge</a></li>
-                <li><a href="#vision">Our Vision</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#about">
+                        About Project PAG-ASA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#problem">
+                        The Challenge
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#vision">
+                        Our Vision
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#research">
+                        Research
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#music">
+                        PAG-ASA Music
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <header class="hero">
 
         <div class="hero-content">
 
-            <h1>PAG-ASA</h1>
+            <h1>
+                PROJECT PAG-ASA
+            </h1>
 
-            <h2>Every Step Counts.</h2>
+            <h2>
+                Every Step Counts.
+            </h2>
 
             <p>
                 Project PAG-ASA is an independent initiative working toward
@@ -345,8 +495,11 @@
                 in the Philippines.
             </p>
 
-            <a href="#about" class="hero-button">
-                Discover the Project
+            <a
+                href="#about"
+                class="hero-button"
+            >
+                Discover Project PAG-ASA
             </a>
 
         </div>
@@ -354,9 +507,14 @@
     </header>
 
 
-    <!-- ABOUT -->
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-    <section id="about" class="about">
+    <section
+        id="about"
+        class="about"
+    >
 
         <div class="container">
 
@@ -365,40 +523,64 @@
             </h2>
 
             <p class="section-intro">
+
                 PAG-ASA means "hope" in Filipino.
+
                 The project was created around a simple belief:
+
                 where a child lives should not determine whether
                 they can safely reach their education.
+
             </p>
+
 
             <div class="about-grid">
 
+
                 <div class="card">
-                    <h3>Safe Journeys</h3>
+
+                    <h3>
+                        Safe Journeys
+                    </h3>
+
                     <p>
                         We want children to be able to travel to school
                         without having to face unnecessary danger on their
                         daily journey.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <h3>Equal Opportunities</h3>
+
+                    <h3>
+                        Equal Opportunities
+                    </h3>
+
                     <p>
                         Education should remain within reach even for
                         children living in remote and geographically
                         isolated communities.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <h3>Local Cooperation</h3>
+
+                    <h3>
+                        Local Cooperation
+                    </h3>
+
                     <p>
                         Sustainable solutions must be developed together
                         with schools, communities, local authorities and
                         people who understand the realities on the ground.
                     </p>
+
                 </div>
+
 
             </div>
 
@@ -407,9 +589,14 @@
     </section>
 
 
-    <!-- CHALLENGE -->
+    <!-- =========================
+         THE CHALLENGE
+    ========================= -->
 
-    <section id="problem">
+    <section
+        id="problem"
+        class="challenge"
+    >
 
         <div class="container">
 
@@ -418,19 +605,25 @@
             </h2>
 
             <p class="section-intro">
+
                 For some children, going to school means crossing rivers,
                 walking through difficult terrain, travelling long distances
                 or using unsafe transportation.
+
             </p>
+
 
             <div class="vision-box">
 
                 <p>
+
                     These journeys are often invisible to people far away
                     from the communities affected by them.
+
                     Project PAG-ASA is working to document these situations,
                     understand the challenges and identify where sustainable
                     transportation solutions could make a real difference.
+
                 </p>
 
             </div>
@@ -440,9 +633,14 @@
     </section>
 
 
-    <!-- VISION -->
+    <!-- =========================
+         OUR VISION
+    ========================= -->
 
-    <section id="vision" class="vision">
+    <section
+        id="vision"
+        class="vision"
+    >
 
         <div class="container">
 
@@ -450,19 +648,26 @@
                 Our Vision
             </h2>
 
+
             <div class="vision-box">
 
                 <p>
+
                     A future where children in remote communities can reach
                     their schools safely, reliably and with dignity.
+
                 </p>
+
 
                 <br>
 
+
                 <p>
+
                     Project PAG-ASA aims to work toward long-term,
                     locally appropriate transportation solutions rather
                     than temporary fixes.
+
                 </p>
 
             </div>
@@ -472,9 +677,14 @@
     </section>
 
 
-    <!-- RESEARCH -->
+    <!-- =========================
+         RESEARCH
+    ========================= -->
 
-    <section id="research" class="phase">
+    <section
+        id="research"
+        class="phase"
+    >
 
         <div class="container">
 
@@ -482,18 +692,23 @@
                 01
             </div>
 
+
             <h3>
                 Research & Network Building
             </h3>
 
+
             <p>
+
                 Project PAG-ASA is currently in its research and
                 network-building phase.
+
                 We are identifying communities and school routes where
                 children face significant transportation challenges,
                 documenting existing situations and seeking contact with
                 schools, education offices, local organizations and people
                 on the ground.
+
             </p>
 
         </div>
@@ -501,9 +716,14 @@
     </section>
 
 
-    <!-- MUSIC -->
+    <!-- =========================
+         MUSIC
+    ========================= -->
 
-    <section id="music" class="music">
+    <section
+        id="music"
+        class="music"
+    >
 
         <div class="container">
 
@@ -511,9 +731,14 @@
                 PAG-ASA Music
             </h2>
 
+
             <p class="section-intro">
-                Music is another way to tell the stories behind the project.
+
+                Music is another way to tell the stories behind
+                Project PAG-ASA.
+
             </p>
+
 
             <div class="music-box">
 
@@ -521,10 +746,13 @@
                     Every Step Counts
                 </h3>
 
+
                 <p>
+
                     An independent music project created alongside
                     Project PAG-ASA, inspired by the journeys of children,
                     parents and teachers.
+
                 </p>
 
             </div>
@@ -534,9 +762,14 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
-    <section id="contact" class="contact">
+    <section
+        id="contact"
+        class="contact"
+    >
 
         <div class="container">
 
@@ -544,12 +777,17 @@
                 Get in Touch
             </h2>
 
+
             <p class="section-intro">
+
                 Are you a school, teacher, education office, local
                 organization or someone with knowledge about difficult
                 school journeys in the Philippines?
+
                 We would like to hear from you.
+
             </p>
+
 
             <a
                 href="mailto:project.pagasa.research@gmail.com"
@@ -563,17 +801,23 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
         <p>
-            <strong>Project PAG-ASA</strong>
+            <strong>
+                Project PAG-ASA
+            </strong>
         </p>
+
 
         <p>
             Every Step Counts.
         </p>
+
 
         <p>
             © 2026 Project PAG-ASA. All rights reserved.
@@ -581,5 +825,8 @@
 
     </footer>
 
+
 </body>
+
 </html>
+```
