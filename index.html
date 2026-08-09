@@ -1,986 +1,1161 @@
+```html
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Project PAG-ASA | Every Step Counts</title>
+<title>Project PAG-ASA | Every Step Counts</title>
 
-    <meta
-        name="description"
-        content="Project PAG-ASA is an independent initiative working toward safe and sustainable transportation solutions for children in remote communities in the Philippines."
-    >
+<meta
+    name="description"
+    content="Project PAG-ASA is an independent initiative founded by Sebastian, working toward safe and sustainable transportation solutions for children in remote communities in the Philippines."
+>
 
-    <style>
+<style>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #1f2933;
-            background: #ffffff;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #1f2933;
+        background: #ffffff;
+    }
 
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
 
-            background: rgba(255, 255, 255, 0.96);
+        background: rgba(255, 255, 255, 0.96);
 
-            border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e5e7eb;
 
-            z-index: 1000;
+        z-index: 1000;
 
-            backdrop-filter: blur(8px);
-        }
+        backdrop-filter: blur(8px);
+    }
 
-        .nav-container {
-            max-width: 1150px;
-            margin: auto;
+    .nav-container {
+        max-width: 1150px;
+        margin: auto;
 
-            padding: 16px 24px;
+        padding: 16px 24px;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .logo {
-            font-weight: 800;
-            font-size: 1.2rem;
+    .logo {
+        font-weight: 800;
+        font-size: 1.2rem;
 
-            color: #0038a8;
+        color: #0038a8;
 
-            letter-spacing: 0.5px;
-        }
+        letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 24px;
+
+        list-style: none;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+
+        color: #374151;
+
+        font-weight: 600;
+
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #0038a8;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+
+        min-height: 100vh;
+
+        padding: 150px 24px 100px;
+
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.28),
+                rgba(0, 0, 0, 0.38)
+            ),
+            url("https://raw.githubusercontent.com/Project-PAG-ASA/projectpagasa.org/main/Image%208.%20Juni%202026%2C%2023_15_30.png");
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        color: white;
+    }
+
+    .hero-content {
+
+        max-width: 1050px;
+
+        margin: auto;
+
+        text-align: center;
+
+        position: relative;
+
+        z-index: 2;
+
+        text-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero h1 {
+
+        font-size: clamp(3rem, 8vw, 6rem);
+
+        line-height: 1;
+
+        margin-bottom: 20px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+
+        font-size: clamp(1.3rem, 3vw, 2rem);
+
+        font-weight: 400;
+
+        margin-bottom: 30px;
+    }
+
+    .hero p {
+
+        max-width: 750px;
+
+        margin: auto;
+
+        font-size: 1.15rem;
+
+        line-height: 1.7;
+    }
+
+    .hero-button {
+
+        display: inline-block;
+
+        margin-top: 35px;
+
+        padding: 14px 28px;
+
+        background: white;
+
+        color: #0038a8;
+
+        text-decoration: none;
+
+        border-radius: 8px;
+
+        font-weight: 700;
+
+        text-shadow: none;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .hero-button:hover {
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+
+        padding: 90px 24px;
+    }
+
+    .container {
+
+        max-width: 1050px;
+
+        margin: auto;
+    }
+
+    .section-title {
+
+        text-align: center;
+
+        font-size: 2.3rem;
+
+        margin-bottom: 20px;
+
+        color: #0038a8;
+    }
+
+    .section-intro {
+
+        max-width: 750px;
+
+        margin: 0 auto 50px;
+
+        text-align: center;
+
+        color: #4b5563;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+
+        background: #f8fafc;
+    }
+
+    .about-introduction {
+
+        max-width: 850px;
+
+        margin: 0 auto 45px;
+
+        text-align: center;
+
+        font-size: 1.15rem;
+
+        color: #374151;
+    }
+
+    .about-introduction strong {
+
+        color: #0038a8;
+    }
+
+    .about-box {
+
+        max-width: 900px;
+
+        margin: 0 auto 45px;
+
+        padding: 40px;
+
+        background: white;
+
+        border-left: 5px solid #0038a8;
+
+        border-radius: 4px;
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-box h3 {
+
+        color: #0038a8;
+
+        margin-bottom: 15px;
+
+        font-size: 1.5rem;
+    }
+
+    .about-box p {
+
+        margin-bottom: 15px;
+    }
+
+    .about-box p:last-child {
+
+        margin-bottom: 0;
+    }
+
+    .about-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 25px;
+    }
+
+    .card {
+
+        background: white;
+
+        padding: 30px;
+
+        border-radius: 12px;
+
+        border: 1px solid #e5e7eb;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+
+        transform: translateY(-4px);
+
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h3 {
+
+        color: #0038a8;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* =========================
+       CHALLENGE
+    ========================= */
+
+    .challenge {
+
+        background: #ffffff;
+    }
+
+
+    /* =========================
+       VISION
+    ========================= */
+
+    .vision {
+
+        background: #ffffff;
+    }
+
+    .vision-box {
+
+        max-width: 850px;
+
+        margin: auto;
+
+        padding: 45px;
+
+        border-left:
+            5px solid #ce1126;
+
+        background: #f8fafc;
+
+        border-radius:
+            0 10px 10px 0;
+    }
+
+    .vision-box p {
+
+        font-size: 1.15rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       RESEARCH
+    ========================= */
+
+    .phase {
+
+        background: #f1f5f9;
+    }
+
+    .phase-number {
+
+        text-align: center;
+
+        font-size: 4rem;
+
+        font-weight: 800;
+
+        color: #ce1126;
+
+        margin-bottom: 10px;
+    }
+
+    .phase h3 {
+
+        text-align: center;
+
+        margin-bottom: 20px;
+
+        font-size: 1.5rem;
+
+        color: #1f2933;
+    }
+
+    .phase p {
+
+        max-width: 750px;
+
+        margin: auto;
+
+        text-align: center;
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       MUSIC
+    ========================= */
+
+    .music {
+
+        background: #0038a8;
+
+        color: white;
+    }
+
+    .music .section-title {
+
+        color: white;
+    }
+
+    .music .section-intro {
+
+        color: #e5e7eb;
+    }
+
+    .music-box {
+
+        max-width: 750px;
+
+        margin: auto;
+
+        text-align: center;
+    }
+
+    .music-box h3 {
+
+        font-size: 2rem;
+
+        margin-bottom: 10px;
+    }
+
+    .music-box p {
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+
+        background: #f8fafc;
+
+        text-align: center;
+    }
+
+    .contact-button {
+
+        display: inline-block;
+
+        margin-top: 20px;
+
+        padding: 14px 28px;
+
+        background: #0038a8;
+
+        color: white;
+
+        text-decoration: none;
+
+        border-radius: 8px;
+
+        font-weight: 700;
+
+        transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+    }
+
+    .contact-button:hover {
+
+        transform: translateY(-2px);
+
+        background: #002d86;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+        background: #111827;
+
+        color: #d1d5db;
+
+        text-align: center;
+
+        padding: 35px 20px;
+    }
+
+    footer p {
+
+        margin-bottom: 6px;
+    }
+
+    footer strong {
+
+        color: white;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 750px) {
 
         .nav-links {
-            display: flex;
-            gap: 24px;
 
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-
-            color: #374151;
-
-            font-weight: 600;
-
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: #0038a8;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-
-            min-height: 100vh;
-
-            padding: 150px 24px 100px;
-
-            display: flex;
-            align-items: center;
-
-            position: relative;
-
-            background-image:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.28),
-                    rgba(0, 0, 0, 0.38)
-                ),
-                url("https://raw.githubusercontent.com/Project-PAG-ASA/projectpagasa.org/main/Image%208.%20Juni%202026%2C%2023_15_30.png");
-
-            background-size: cover;
-
-            background-position: center;
-
-            background-repeat: no-repeat;
-
-            color: white;
-        }
-
-        .hero-content {
-
-            max-width: 1050px;
-
-            margin: auto;
-
-            text-align: center;
-
-            position: relative;
-
-            z-index: 2;
-
-            text-shadow:
-                0 2px 8px rgba(0, 0, 0, 0.45);
-        }
-
-        .hero h1 {
-
-            font-size: clamp(3rem, 8vw, 6rem);
-
-            line-height: 1;
-
-            margin-bottom: 20px;
-
-            letter-spacing: 2px;
-        }
-
-        .hero h2 {
-
-            font-size: clamp(1.3rem, 3vw, 2rem);
-
-            font-weight: 400;
-
-            margin-bottom: 30px;
-        }
-
-        .hero p {
-
-            max-width: 750px;
-
-            margin: auto;
-
-            font-size: 1.15rem;
-
-            line-height: 1.7;
-        }
-
-        .hero-button {
-
-            display: inline-block;
-
-            margin-top: 35px;
-
-            padding: 14px 28px;
-
-            background: white;
-
-            color: #0038a8;
-
-            text-decoration: none;
-
-            border-radius: 8px;
-
-            font-weight: 700;
-
-            text-shadow: none;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .hero-button:hover {
-
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 8px 20px rgba(0, 0, 0, 0.25);
-        }
-
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        section {
-
-            padding: 90px 24px;
-        }
-
-        .container {
-
-            max-width: 1050px;
-
-            margin: auto;
-        }
-
-        .section-title {
-
-            text-align: center;
-
-            font-size: 2.3rem;
-
-            margin-bottom: 20px;
-
-            color: #0038a8;
-        }
-
-        .section-intro {
-
-            max-width: 750px;
-
-            margin: 0 auto 50px;
-
-            text-align: center;
-
-            color: #4b5563;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-
-            background: #f8fafc;
+            display: none;
         }
 
         .about-grid {
 
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
+            grid-template-columns: 1fr;
         }
 
-        .card {
+        .hero {
 
-            background: white;
+            padding-top: 130px;
 
-            padding: 30px;
-
-            border-radius: 12px;
-
-            border: 1px solid #e5e7eb;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+            background-position:
+                center center;
         }
 
-        .card:hover {
+        section {
 
-            transform: translateY(-4px);
-
-            box-shadow:
-                0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        .card h3 {
-
-            color: #0038a8;
-
-            margin-bottom: 12px;
-        }
-
-
-        /* =========================
-           CHALLENGE
-        ========================= */
-
-        .challenge {
-
-            background: #ffffff;
-        }
-
-
-        /* =========================
-           VISION
-        ========================= */
-
-        .vision {
-
-            background: #ffffff;
+            padding: 70px 20px;
         }
 
         .vision-box {
 
-            max-width: 850px;
-
-            margin: auto;
-
-            padding: 45px;
-
-            border-left:
-                5px solid #ce1126;
-
-            background: #f8fafc;
-
-            border-radius: 0 10px 10px 0;
+            padding: 30px;
         }
 
-        .vision-box p {
+        .about-box {
 
-            font-size: 1.15rem;
-
-            line-height: 1.8;
+            padding: 30px;
         }
 
+        .hero h1 {
 
-        /* =========================
-           RESEARCH
-        ========================= */
-
-        .phase {
-
-            background: #f1f5f9;
+            font-size:
+                clamp(
+                    2.6rem,
+                    12vw,
+                    4rem
+                );
         }
 
-        .phase-number {
+        .hero p {
 
-            text-align: center;
-
-            font-size: 4rem;
-
-            font-weight: 800;
-
-            color: #ce1126;
-
-            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
-        .phase h3 {
+    }
 
-            text-align: center;
-
-            margin-bottom: 20px;
-
-            font-size: 1.5rem;
-
-            color: #1f2933;
-        }
-
-        .phase p {
-
-            max-width: 750px;
-
-            margin: auto;
-
-            text-align: center;
-
-            line-height: 1.8;
-        }
-
-
-        /* =========================
-           MUSIC
-        ========================= */
-
-        .music {
-
-            background: #0038a8;
-
-            color: white;
-        }
-
-        .music .section-title {
-
-            color: white;
-        }
-
-        .music .section-intro {
-
-            color: #e5e7eb;
-        }
-
-        .music-box {
-
-            max-width: 750px;
-
-            margin: auto;
-
-            text-align: center;
-        }
-
-        .music-box h3 {
-
-            font-size: 2rem;
-
-            margin-bottom: 10px;
-        }
-
-        .music-box p {
-
-            line-height: 1.8;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-
-            background: #f8fafc;
-
-            text-align: center;
-        }
-
-        .contact-button {
-
-            display: inline-block;
-
-            margin-top: 20px;
-
-            padding: 14px 28px;
-
-            background: #0038a8;
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 8px;
-
-            font-weight: 700;
-
-            transition:
-                transform 0.2s ease,
-                background 0.2s ease;
-        }
-
-        .contact-button:hover {
-
-            transform: translateY(-2px);
-
-            background: #002d86;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            background: #111827;
-
-            color: #d1d5db;
-
-            text-align: center;
-
-            padding: 35px 20px;
-        }
-
-        footer p {
-
-            margin-bottom: 6px;
-        }
-
-        footer strong {
-
-            color: white;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 750px) {
-
-            .nav-links {
-
-                display: none;
-            }
-
-            .about-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-
-                padding-top: 130px;
-
-                background-position:
-                    center center;
-            }
-
-            section {
-
-                padding: 70px 20px;
-            }
-
-            .vision-box {
-
-                padding: 30px;
-            }
-
-            .hero h1 {
-
-                font-size:
-                    clamp(
-                        2.6rem,
-                        12vw,
-                        4rem
-                    );
-            }
-
-            .hero p {
-
-                font-size: 1rem;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
-
 
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <nav>
+<nav>
 
-        <div class="nav-container">
+    <div class="nav-container">
 
-            <div class="logo">
-                PROJECT PAG-ASA
-            </div>
-
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#about">
-                        About Project PAG-ASA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#problem">
-                        The Challenge
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#vision">
-                        Our Vision
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#research">
-                        Research
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#music">
-                        PAG-ASA Music
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
+        <div class="logo">
+            PROJECT PAG-ASA
         </div>
 
-    </nav>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#about">
+                    About Project PAG-ASA
+                </a>
+            </li>
+
+            <li>
+                <a href="#problem">
+                    The Challenge
+                </a>
+            </li>
+
+            <li>
+                <a href="#vision">
+                    My Vision
+                </a>
+            </li>
+
+            <li>
+                <a href="#research">
+                    Research
+                </a>
+            </li>
+
+            <li>
+                <a href="#music">
+                    Music
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+<!-- =========================
+     HERO
+========================= -->
 
-    <header class="hero">
+<header class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <h1>
-                PROJECT PAG-ASA
-            </h1>
+        <h1>
+            PROJECT PAG-ASA
+        </h1>
 
-            <h2>
-                Every Step Counts.
-            </h2>
+        <h2>
+            Every Step Counts.
+        </h2>
+
+        <p>
+
+            Project PAG-ASA is an independent initiative
+            founded by Sebastian, working toward safe and
+            sustainable transportation solutions for children
+            who face difficult journeys to school in remote
+            communities in the Philippines.
+
+        </p>
+
+
+        <a
+            href="#about"
+            class="hero-button"
+        >
+            Discover Project PAG-ASA
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    id="about"
+    class="about"
+>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Project PAG-ASA
+        </h2>
+
+
+        <p class="about-introduction">
+
+            <strong>PAG-ASA</strong> means "hope" in Filipino.
+
+            I created Project PAG-ASA around a simple belief:
+
+            where a child lives should not determine whether
+            they can safely reach their education.
+
+        </p>
+
+
+        <div class="about-box">
+
+            <h3>
+                What is Project PAG-ASA?
+            </h3>
 
             <p>
 
                 Project PAG-ASA is an independent initiative
-                working toward safe and sustainable transportation
-                solutions for children who face difficult journeys
-                to school in remote communities in the Philippines.
+                focused on the difficult journeys some children
+                face when travelling to school in remote
+                communities in the Philippines.
 
             </p>
 
+            <p>
 
-            <a
-                href="#about"
-                class="hero-button"
-            >
-                Discover Project PAG-ASA
-            </a>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section
-        id="about"
-        class="about"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                About Project PAG-ASA
-            </h2>
-
-
-            <p class="section-intro">
-
-                PAG-ASA means "hope" in Filipino.
-
-                The project was created around a simple belief:
-
-                where a child lives should not determine whether
-                they can safely reach their education.
+                I am currently building the project from the
+                ground up, beginning with research, documentation
+                and network building.
 
             </p>
 
+            <p>
 
-            <div class="about-grid">
+                My goal is to understand the real challenges
+                faced by children, families, teachers and
+                communities before working toward practical
+                and sustainable transportation solutions.
 
-
-                <div class="card">
-
-                    <h3>
-                        Safe Journeys
-                    </h3>
-
-                    <p>
-
-                        We want children to be able to travel
-                        to school without having to face
-                        unnecessary danger on their daily journey.
-
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Equal Opportunities
-                    </h3>
-
-                    <p>
-
-                        Education should remain within reach
-                        even for children living in remote and
-                        geographically isolated communities.
-
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Local Cooperation
-                    </h3>
-
-                    <p>
-
-                        Sustainable solutions must be developed
-                        together with schools, communities,
-                        local authorities and people who understand
-                        the realities on the ground.
-
-                    </p>
-
-                </div>
-
-
-            </div>
+            </p>
 
         </div>
 
-    </section>
 
+        <div class="about-box">
 
-    <!-- =========================
-         THE CHALLENGE
-    ========================= -->
+            <h3>
+                Why I Started Project PAG-ASA
+            </h3>
 
-    <section
-        id="problem"
-        class="challenge"
-    >
+            <p>
 
-        <div class="container">
+                Education should be accessible to every child,
+                regardless of where they live.
 
-            <h2 class="section-title">
-                The Challenge
-            </h2>
+            </p>
 
+            <p>
 
-            <p class="section-intro">
-
-                For some children, going to school means crossing
-                rivers, walking through difficult terrain,
-                travelling long distances or using unsafe
+                But for some children, reaching school can mean
+                crossing rivers, walking through difficult terrain,
+                travelling long distances or relying on unsafe
                 transportation.
 
             </p>
 
+            <p>
 
-            <div class="vision-box">
+                I believe that these journeys deserve attention.
+                Project PAG-ASA is my attempt to learn more about
+                these situations and explore what can be done to
+                improve them in the long term.
 
-                <p>
-
-                    These journeys are often invisible to people
-                    far away from the communities affected by them.
-
-                    Project PAG-ASA is working to document these
-                    situations, understand the challenges and
-                    identify where sustainable transportation
-                    solutions could make a real difference.
-
-                </p>
-
-            </div>
+            </p>
 
         </div>
 
-    </section>
 
-
-    <!-- =========================
-         OUR VISION
-    ========================= -->
-
-    <section
-        id="vision"
-        class="vision"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Our Vision
-            </h2>
-
-
-            <div class="vision-box">
-
-                <p>
-
-                    A future where children in remote communities
-                    can reach their schools safely, reliably and
-                    with dignity.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-
-                    Project PAG-ASA aims to work toward long-term,
-                    locally appropriate transportation solutions
-                    rather than temporary fixes.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         RESEARCH
-    ========================= -->
-
-    <section
-        id="research"
-        class="phase"
-    >
-
-        <div class="container">
-
-            <div class="phase-number">
-                01
-            </div>
-
+        <div class="about-box">
 
             <h3>
-                Research & Network Building
+                An Independent Project
+            </h3>
+
+            <p>
+
+                Project PAG-ASA is independently founded and
+                developed by me, Sebastian.
+
+            </p>
+
+            <p>
+
+                At this stage, Project PAG-ASA is not a registered
+                organization, NGO or transportation company.
+
+            </p>
+
+            <p>
+
+                I am not currently collecting donations,
+                operating vehicles or running a school
+                transportation program.
+
+                The project is still in its research and
+                network-building phase.
+
+            </p>
+
+            <p>
+
+                I believe that understanding the situation first
+                is essential before making promises or developing
+                solutions.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="card">
+
+                <h3>
+                    Safe Journeys
+                </h3>
+
+                <p>
+
+                    I want children to be able to travel to school
+                    without having to face unnecessary danger on
+                    their daily journey.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Equal Opportunities
+                </h3>
+
+                <p>
+
+                    I believe education should remain within reach
+                    even for children living in remote and
+                    geographically isolated communities.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Local Cooperation
+                </h3>
+
+                <p>
+
+                    I believe sustainable solutions must be
+                    developed together with schools, communities,
+                    local authorities and people who understand
+                    the realities on the ground.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     THE CHALLENGE
+========================= -->
+
+<section
+    id="problem"
+    class="challenge"
+>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            The Challenge
+        </h2>
+
+
+        <p class="section-intro">
+
+            For some children, going to school means crossing
+            rivers, walking through difficult terrain,
+            travelling long distances or using unsafe
+            transportation.
+
+        </p>
+
+
+        <div class="vision-box">
+
+            <p>
+
+                These journeys are often invisible to people
+                far away from the communities affected by them.
+
+                I am working to document these situations,
+                understand the challenges and identify where
+                sustainable transportation solutions could
+                make a real difference.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MY VISION
+========================= -->
+
+<section
+    id="vision"
+    class="vision"
+>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Vision
+        </h2>
+
+
+        <div class="vision-box">
+
+            <p>
+
+                My vision is a future where children in remote
+                communities can reach their schools safely,
+                reliably and with dignity.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                I want Project PAG-ASA to work toward long-term,
+                locally appropriate transportation solutions
+                rather than temporary fixes.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESEARCH
+========================= -->
+
+<section
+    id="research"
+    class="phase"
+>
+
+    <div class="container">
+
+        <div class="phase-number">
+            01
+        </div>
+
+
+        <h3>
+            Research & Network Building
+        </h3>
+
+
+        <p>
+
+            Project PAG-ASA is currently in its research
+            and network-building phase.
+
+            I am identifying communities and school routes
+            where children face significant transportation
+            challenges, documenting existing situations and
+            seeking contact with schools, education offices,
+            local organizations and people on the ground.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<section
+    id="music"
+    class="music"
+>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            PAG-ASA Music
+        </h2>
+
+
+        <p class="section-intro">
+
+            Music is another way for me to tell the stories
+            and emotions behind Project PAG-ASA.
+
+        </p>
+
+
+        <div class="music-box">
+
+            <h3>
+                Every Step Counts
             </h3>
 
 
             <p>
 
-                Project PAG-ASA is currently in its research
-                and network-building phase.
-
-                We are identifying communities and school routes
-                where children face significant transportation
-                challenges, documenting existing situations and
-                seeking contact with schools, education offices,
-                local organizations and people on the ground.
+                An independent music project created alongside
+                Project PAG-ASA, inspired by the journeys of
+                children, parents and teachers.
 
             </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         MUSIC
-    ========================= -->
+<!-- =========================
+     CONTACT
+========================= -->
 
-    <section
-        id="music"
-        class="music"
-    >
+<section
+    id="contact"
+    class="contact"
+>
 
-        <div class="container">
+    <div class="container">
 
-            <h2 class="section-title">
-                PAG-ASA Music
-            </h2>
-
-
-            <p class="section-intro">
-
-                Music is another way to tell the stories behind
-                Project PAG-ASA.
-
-            </p>
+        <h2 class="section-title">
+            Get in Touch
+        </h2>
 
 
-            <div class="music-box">
+        <p class="section-intro">
 
-                <h3>
-                    Every Step Counts
-                </h3>
+            Are you a school, teacher, education office,
+            local organization or someone with knowledge
+            about difficult school journeys in the Philippines?
 
+            I would like to hear from you.
 
-                <p>
-
-                    An independent music project created alongside
-                    Project PAG-ASA, inspired by the journeys of
-                    children, parents and teachers.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section
-        id="contact"
-        class="contact"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Get in Touch
-            </h2>
-
-
-            <p class="section-intro">
-
-                Are you a school, teacher, education office,
-                local organization or someone with knowledge
-                about difficult school journeys in the Philippines?
-
-                We would like to hear from you.
-
-            </p>
-
-
-            <a
-                href="mailto:project.pagasa.research@gmail.com"
-                class="contact-button"
-            >
-                Contact Project PAG-ASA
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        <p>
-            <strong>
-                Project PAG-ASA
-            </strong>
         </p>
 
 
-        <p>
-            Every Step Counts.
-        </p>
+        <a
+            href="mailto:project.pagasa.research@gmail.com"
+            class="contact-button"
+        >
+            Contact Project PAG-ASA
+        </a>
+
+    </div>
+
+</section>
 
 
-        <p>
-            © 2026 Project PAG-ASA. All rights reserved.
-        </p>
+<!-- =========================
+     FOOTER
+========================= -->
 
-    </footer>
+<footer>
+
+    <p>
+        <strong>
+            Project PAG-ASA
+        </strong>
+    </p>
+
+
+    <p>
+        Every Step Counts.
+    </p>
+
+
+    <p>
+        © 2026 Project PAG-ASA. All rights reserved.
+    </p>
+
+</footer>
 
 
 </body>
 
 </html>
+```
